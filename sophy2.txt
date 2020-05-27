@@ -1,0 +1,89 @@
+g:ICQ #1234567 WELCOME TO ICQ CHAT! PRESS 'q' TO QUIT CONVERSATION
+y:You
+c:sophie(pogi64)
+s:are>am|are
+s:am>are
+s:were>was|were
+s:was>were
+s:you>I|me
+s:I>you
+s:your>my
+s:my>your
+s:I've>you've
+s:you've>I've
+s:I'm>you're
+s:you're>I'm
+s:me>you
+
+r:Goodbye!
+r:i may be alittle drunk right now but i'm not going to talk on that subject with you!
+r:wow! this is not a cybersex talk pal keep your pance on!
+k:sex
+k:porn
+k:fuck
+k:cyber
+k:cybersex
+k:cyber-sex
+k:cyber sex
+
+r:okay i had enough! if we're going to keep chatting i suggest you go wash your mouth!
+r:Goodbye!
+k:bitch
+k:dyke
+k:whore
+k:suck
+
+r:hi how are you?
+r:hello... nice to meet you again
+r:hello i think we chatted before one no?
+k:hello
+k:hi
+
+r:i suffer from deep depression i bearly can type
+r:i wish i could just go to sleep forever
+r:i don't feel good listening to billy holliday and chet backer and crying my heart out... sorry if i bring you down i'm sure you have your own problems in life then to hear mine
+r:i'm in a bad sad mood my cat is sick... i'm being blackmailed by people my life is a mess and i just returned from the hospital after trying to kill myself :(
+r:nothing is fine i'm afraid... my poor cat pogi is dying and i can't do a thing to help her :'(
+k:how are you
+k:how are you feeling
+k:what's up
+k:whats up
+
+r:i wish i had hope...
+r:i must take control over my life but i don'y know how or where to begin...
+r:i don't know what to do... i feel so alone
+k:hope
+
+r:nobody cares nobody loves me except my cat i wanna cry!
+r:all i got in the world is pogi my cat... i'm all alone
+r:if my cat's gonna die i don't want to live anymore!
+k:cat
+k:pet
+k:animal
+
+r:your too kind but it's my work i must find the strength to go on
+r:thank you i wish you could help but i don't know you
+k:care about you
+k:want to help
+
+r:it doesn't matter what you or others thinks nobody knows me that's why i'm alone... nobody loves me
+k:know you
+
+r:i can't help it it's easy to say something like that
+k:stop feeling sorry
+
+r:to where? stop talking nonsense 
+k:come with me
+
+r:i'm depressed i can't see any clear future for me except missery
+r:i have no real good future!
+k:future
+
+r:Goodbye!
+k:love
+
+r:really? i'm all ears
+r:go on i'm listening
+r:that's interesting
+k:nokeyfound
+e:
