@@ -10,8 +10,9 @@ DIM SHARED Greeting AS STRING, You AS STRING, Script AS STRING
 DIM SHARED kCnt AS INTEGER, rCnt AS INTEGER, wCnt AS INTEGER, NoKeyFoundIndex AS INTEGER
 REDIM SHARED keywords(0) AS STRING, replies(0) AS STRING, wordIn(0) AS STRING, wordOut(0) AS STRING
 REDIM SHARED rStarts(0) AS INTEGER, rEnds(0) AS INTEGER, rIndex(0) AS INTEGER
-DIM SHARED sophie_state, passport, ticket, escapeMoney AS INTEGER
-dim shared h&
+DIM SHARED sophie_state, passport, ticket
+DIM SHARED escapeMoney AS LONG
+DIM SHARED h&
 '~ sophie_state = 0
 '~ passport = 0
 '~ ticket = 0
@@ -55,18 +56,19 @@ SUB the_end (f AS STRING, soundChoice AS INTEGER)
         BEEP
     END IF
     CLS
-    DIM buffer AS STRING
+    DIM buffer AS STRING, tmp AS STRING
     ''dim h as long = freefile()
-    OPEN f FOR BINARY AS #1
-    buffer = SPACE$(LOF(1))
-    GET #1, , buffer
+    OPEN f FOR INPUT AS #1
+    WHILE NOT EOF(1)
+        LINE INPUT #1, tmp 'reading one line at a time
+        buffer = buffer + tmp + CHR$(13) 'adding the newline manually
+    WEND
     PRINT buffer
     CLOSE #1
-    'OPEN f FOR BINARY AS #1
-    'd$ = SPACE$(LOF(1))
-    'GET #1, , d$
-    'CLOSE #1
-    'PRINT d$
+
+
+
+
 
     SLEEP
     _SNDSTOP h&
@@ -419,13 +421,14 @@ END SUB
 
 
 SUB runawayMoney ()
-    DIM cash AS INTEGER, message AS STRING
+    DIM cash AS LONG, message AS STRING
     CLS
     cp 4, "YOU HAVE NOW " + STR$(money) + "$"
     PRINT
     PRINT
     PRINT
-    INPUT "HOW MUCH MONEY WILL YOU TRANSFER TO A SECRET BANK ACCOUNT FOR YOUR LIFE AFTER YOU ESCAPE?: ", cash
+    PRINT "HOW MUCH MONEY WILL YOU TRANSFER TO A SECRET BANK ACCOUNT FOR YOUR LIFE AFTER YOU ESCAPE?: "
+    INPUT "", cash
     IF cash <= 0 THEN
         message = "YOU MUST BE JOKING! COME BACK WHEN YOUR SERIOUS"
     ELSEIF cash > money THEN
@@ -435,11 +438,11 @@ SUB runawayMoney ()
         message = "MONEY TRANSFERED!"
         escapeMoney = escapeMoney + cash
     END IF
-     
+
     PRINT
     PRINT
     PRINT message
-    
+
     SLEEP
 END SUB
 
@@ -563,7 +566,8 @@ SUB steal ()
     DIM k AS STRING, m AS STRING
 
     CLS
-    cp 4, "YOU GAIN ACCESS TO THE BANK AND FEEL LIKE A KID IN A CANDY STORE... WHAT DO YOU SAY SHELL WE STEAL SOME MONEY FROM THE BANK?"
+    cp 4, "YOU GAIN ACCESS TO THE BANK AND FEEL LIKE A KID IN A CANDY STORE..."
+    cp 5, "WHAT DO YOU SAY SHELL WE STEAL SOME MONEY FROM THE BANK?"
     cp 6, "- 1. STEAL 100,000 DOLLARS OR 2. STAY HONEST AND DON'T TOUCH THE MONEY -"
     k = GetKeys$("12")
     IF k = "1" THEN
